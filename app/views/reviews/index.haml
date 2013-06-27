@@ -9,7 +9,7 @@
 
   - @reviews.each do |review|
     %tr
-      %td= review.name
+      %td= review.reviewer_name
       %td= link_to 'Show', review
       %td= link_to 'Edit', edit_review_path(review)
       %td= link_to 'Destroy', review, :method => :delete, :data => { :confirm => 'Are you sure?' }
