@@ -1,2 +1,19 @@
-<h1>Reviews#index</h1>
-<p>Find me in app/views/reviews/index.html.erb</p>
+%h1 Listing reviews
+
+%table
+  %tr
+    %th Name
+    %th
+    %th
+    %th
+
+  - @reviews.each do |review|
+    %tr
+      %td= review.name
+      %td= link_to 'Show', review
+      %td= link_to 'Edit', edit_review_path(review)
+      %td= link_to 'Destroy', review, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Review', new_review_path
