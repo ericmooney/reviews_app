@@ -1,7 +1,8 @@
 ReviewsApp::Application.routes.draw do
   resources :categories
-  resources :reviews
-  resources :products
+  resources :products do
+    resources :reviews
+  end
 
   root :to => 'products#new'
 

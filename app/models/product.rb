@@ -1,5 +1,5 @@
 class Product < ActiveRecord::Base
-  has many :reviews
+  has_many :reviews
   belongs_to :category
 
   attr_accessible :description, :name
